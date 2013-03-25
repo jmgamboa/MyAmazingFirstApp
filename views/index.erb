@@ -1,54 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<link href='http://fonts.googleapis.com/css?family=Gabriela|Nunito|Shanti' rel='stylesheet' type='text/css'>
+
+
   <head>
-    <title>My Amazing First App</title>
+    <title>The Java Survey</title>
     <link href="css/screen.css" type="text/css" rel="stylesheet" />
   </head>
   
   <body>
-    <h1>My Amazing First App</h1>
     
+    <div class="title">
+      <h1>The Amazing Java Survey</h1>
+      <p1>-Made for Java script-</p1>
+    </div>  
+
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>
       </div>
     <% end %>
-    
-    <div>
-      <img src="images/nightbus.jpg" title="Dan drunk on a nightbus in London" alt="Dan on a bus" />
+   
+   <div>
+      <img src="images/coffeeside.jpg" title="Coffee Sign" alt="Coffee Sign" />
     </div>
     
-    <div>
+
+    <div class="About">
+      <h2>About The Java</h2>
+      <p>The Amazing Java survey wants to know you, especially how you drink your coffee.  Did you know there are so many ways to drink coffee? Who would've known.
+      Fun fact about java: Did you know car is to carpet what java is to javascript?</p>
+    </div>  
+
+    <div class="survey">
       <form action="/submit" method="POST">
       
-        <h3>What do you think of this photo?</h3>
+        <h2>How Do You Like Your Coffee</h2>
         
-        <div>
-          <label for="answer">Cool</label>
-          <input type="radio" name="answer" value="cool"/>
-        <div>
-        
-        <div>
-          <label for="answer">Not Cool</label>
-          <input type="radio" name="answer" value="not cool" />
+        <div class="selection">
+          <div>
+            <label for="answer">Black</label>
+            <input type="radio" name="answer" value="Black"/>
+          </div>
+
+          <div>
+            <label for="answer">Cream and Sugar</label>
+            <input type="radio" name="answer" value="Cream and Sugar"/>
+          </div>
+          
+          <div>
+            <label for="answer">Just Cream</label>
+            <input type="radio" name="answer" value="Just Cream" />
+          </div>
+          
+          <div>
+            <label for="answer">Just Sugar</label>
+            <input type="radio" name="answer" value="Just Sugar" />
+          </div>
+          
+          <div>
+            <label for="answer">Do not like Java</label>
+            <input type="radio" name="answer" value="Do not like Java" />
+          </div>
+
+          <div>
+            <label for="tc">
+              I certify that I am sane and capable of making this 
+              decision.
+            <label>
+            <input type="checkbox" name="tc" value="1" />
+          </div>
         </div>
-        
+
         <div>
-          <label for="answer">Undecided</label>
-          <input type="radio" name="answer" value="undecided" />
-        </div>
-        
-        <div>
-          <label for="tc">
-            I certify that I am sane and capable of making this 
-            decision.
-          <label>
-          <input type="checkbox" name="tc" value="1" />
-        </div>
-        
-        <div>
-          <input type="submit" name="submit" value="Submit" />
+          <input class="button" type="submit" name="submit" value="Submit" />
         </div>
       
       </form>
