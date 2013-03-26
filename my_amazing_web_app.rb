@@ -12,9 +12,10 @@ end
 
 post '/submit' do
 
-  if params[:tc] == [1]
+
+  if params[:answer] && params[:tc] == "1" 
     
-    @message = "#{firstname} drinks their coffee #{params[:answer]}"
+    @message = "#{params[:firstname]} drinks their coffee #{params[:answer]}"
     
     
     @account_sid = "ACf5043ffa0a4bbfccf4e9ac9859db2f35"
@@ -34,7 +35,7 @@ post '/submit' do
      
   else
 
-    flash[:notice] = "Please check the box to confirm your capabilities"
+    flash[:notice] = "Please check the appropriate boxes"
     redirect '/'
 
   end

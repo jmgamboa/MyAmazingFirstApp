@@ -3,6 +3,7 @@ body {
   font-family: "Lucida Bright", Georgia, serif;  
   background-color: #A97D5D;
   color: #F7DCB4;
+   
 }
 
 h1 {
@@ -36,6 +37,7 @@ h2, h3 {
 
 .selection, p {
 	font-family: 'Shanti', sans-serif;
+	color: white;
 }
 
 
